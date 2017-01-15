@@ -1,0 +1,21 @@
+body {
+  background: url('../img/texture.jpg');
+}
+
+#mc-ride {
+  transition: transform 1s ease-in-out;
+}
+
+#btn-mc-ride-say {
+  height: 20px;
+  width: 50px;
+  background: grey;
+}
+
+.rotate-left {
+  transform: rotate(45deg);
+}
+
+.rotate-right {
+  transform: rotate(-45deg);
+}
