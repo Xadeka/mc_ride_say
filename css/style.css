@@ -1,5 +1,31 @@
+html {
+  margin: 0;
+  padding: 0;
+
+}
+
 body {
-  background: url('../img/texture.jpg');
+  background: url('../img/wall.jpg');
+}
+
+.main {
+  background: url('../img/background.gif');
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  width: 61%;
+  height: 70%;
+
+  position: absolute;
+  z-index: -1;
+  top: 10%;
+  left: 11%;
+}
+
+.tv {
+  height: 100%;
+  width: 100%;
+  position: absolute;
 }
 
 #mc-ride {
@@ -25,4 +51,116 @@ body {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+#roman {
+  height: 300px;
+  width: 150px;
+
+  position: absolute;
+  bottom: -25px;
+  left: 25px;
+  transform: rotate(26deg);
+}
+
+#bubble {
+  position: absolute;
+  right: 15px;
+  transform: rotate(-15deg);
+
+}
+
+.column-left {
+  height: 98%;
+}
+
+.column-right {
+  height: 98%;
+  float: right;
+}
+
+#house {
+  position: absolute;
+  z-index: -2;
+  top: 10%;
+  left: 14%;
+  border: 10px solid #bbb;
+
+  height: 150px;
+  width: 150px;
+}
+
+#dolphin-icon {
+  position: absolute;
+  bottom: 13%;
+  right: 15%;
+
+  width: 100px;
+  height: 150px;
+
+}
+
+#task-bar {
+  position: absolute;
+  bottom: 3%;
+  left: 0;
+  width: 100%;
+  height: 50px;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+        font-family: Tahoma, Verdana;
+        color: #070707;
+}
+
+.window {
+            width: 400px;
+            overflow: auto;
+            resize: both;
+            background: #bfbfbf;
+            border: 1px solid;
+            border-color: #dfdfdf #808080;
+            box-shadow: 1px 1px 0 0 #000;
+            margin: 0 auto;
+}
+.window .header {
+        margin: 2px 2px 0;
+        padding: 1px 2px;
+        color: #fff;
+        background: linear-gradient(to right, #000080, #1084d0);
+        font-weight: bold;
+        font-size: 11px;
+        line-height: 16px;
+}
+.header .icon {
+        width: 16px;
+        height: 16px;
+        float: left;
+        margin-right: 2px;
+}
+.window .content {
+        padding: 7px 10px;
+}
+.window button {
+        text-align: center;
+        outline: none;
+        padding: 4px;
+        background: #bfbfbf;
+        border: 1px solid;
+        border-color: #dfdfdf #808080;
+        box-shadow: 1px 1px 0 0 #000;
+}
+.window button:enabled {
+  color: #070707;
+}
+.window button:disabled {
+  color: #818181;
+  text-shadow: 1px 1px #fff;
+}
+.window button:active:enabled {
+  box-shadow: 0 0 0 0 #000 inset;
+  border-color: #000;
 }

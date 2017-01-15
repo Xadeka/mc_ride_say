@@ -1,21 +1,36 @@
 $(document).ready(function() {
 
-  var img_file_prefix = 'img/mc_ride';
-  var img_file_ext = '.png';
-  var numOfImgs = 4; //not including default
+  var imgs = [
+    'img/angery react.gif',
+    'img/mic on white.gif',
+    'img/mc_ride1.png',
+    'img/mc_ride2.png',
+    'img/mc_ride3.png'
+  ]
 
-  var wav_file_prefix = 'sounds/mc_ride';
-  var wav_file_ext = '.wav';
-  var numOfAudio = 4;
+  var sounds = [
+    'sounds/mc_ride0.wav',
+    'sounds/mc_ride1.wav',
+    'sounds/mc_ride2.wav',
+    'sounds/mc_ride3.wav',
+    'sounds/mc_ride4.wav',
+    'sounds/mc_ride5.wav',
+    'sounds/mc_ride6.wav',
+    'sounds/mc_ride7.wav',
+    'sounds/mc_ride7.wav',
+    'sounds/mc_ride7.wav'
+  ]
 
   var mc_ride = $('#mc-ride');
 
-  mc_ride.on('click', function() {
-    var rand_wav = Math.floor(Math.random() * (numOfAudio - 0));
-    var audio = new Audio(wav_file_prefix + rand_wav + wav_file_ext);
+  $('.tv').on('click', function() {
+    console.log('im click');
+    var wav_i = Math.floor(Math.random() * sounds.length);
+    var audio = new Audio(sounds[wav_i]);
     audio.play();
-    var randImg = Math.floor(Math.random() * (numOfImgs)) + 1;
-    mc_ride.attr('src', img_file_prefix + randImg + img_file_ext);
+    console.log('test');
+    var img_i = Math.floor(Math.random() * imgs.length);
+    mc_ride.attr('src', imgs[img_i]);
     mc_ride.toggleClass('rotate-left');
         setTimeout(function(){
       mc_ride.toggleClass('rotate-left');
@@ -23,7 +38,7 @@ $(document).ready(function() {
       setTimeout(function(){
         mc_ride.toggleClass('rotate-right');
         setTimeout(function(){
-          mc_ride.attr('src', img_file_prefix + '0' + img_file_ext);
+          mc_ride.attr('src', 'img/mc_ride0.png');
         },1000);
       }, 1000);
     }, 1000);
